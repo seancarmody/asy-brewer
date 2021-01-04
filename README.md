@@ -2,10 +2,14 @@
 
 [Asymptote](https://asymptote.sourceforge.io) is vector graphics language for
 technical drawing. It ships with a number of base modules including `palettes`
-which provides a number of colour palettes. This aims to supplement these with
-some more effective colour schemes from Cynthia Brewer and Mark Hadden's 
-Color Brewer 2.0 (http://colorbrewer2.org/)..
+which provides a number of colour palettes. This module supplements these with
+Cynthia Brewer and Mark Hadden's ColorBrewer palettes (http://colorbrewer2.org/).
 
+The ColorBrewer palettes were designed for maps, allowing effective differentiation
+of different colours in neighbouring regions, but they are also useful for other
+applications. 
+
+[HarrowerBrewer2003](https://www.tandfonline.com/doi/abs/10.1179/000870403235002042):
 Harrower, Mark, and Cynthia A. Brewer. "ColorBrewer. org: an online tool for
 selecting colour schemes for maps." *The Cartographic Journal* 40.1 (2003): 27-37.
 
@@ -27,3 +31,6 @@ Included in this repository is the file `demo.asy` which gives a further example
 usage of the module which produces the figure below.
 
 ![Colour Demo](https://raw.githubusercontent.com/seancarmody/asy-brewer/main/demo.png)
+
+Also included in this repository is `brewer.json` which provides all of the ColorBrewer
+palettes in [JSON](https://www.json.org/json-en.html) format.
