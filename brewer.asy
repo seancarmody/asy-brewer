@@ -18,6 +18,7 @@
 //    "Set2", "Set3"}
 
 pen[] Diverging(string name, int n = 4){
+  assert(n > 3, "n must be at least 3");
 	pen[] p;
 	if (name == "Spectral"){
 		if (n==3){
@@ -932,7 +933,8 @@ return p;
 }
 
 pen[] Qualitative(string name, int n = 4){
-	pen[] p;
+  assert(n > 3, "n must be at least 3");
+  pen[] p;
 	if (name == "Set2"){
 		if (n==3){
 			p = new pen[] {
@@ -1551,6 +1553,7 @@ return p;
 }
 
 pen[] Sequential(string name, int n = 4){
+  assert(n > 3, "n must be at least 3");
 	pen[] p;
 	if (name == "OrRd"){
 		if (n==3){

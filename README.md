@@ -13,13 +13,14 @@ This module provides three functions returning different types of palettes:
 - **Sequential**: suited to data that ranges from low to high values either on an
   ordinal scale (e.g. cold, warm, hot) or on a numerical scale
 - **Diverging**: used when a critical data class or break point needs to be emphasised
-- **Qualitative**: used for data thet does not imply order, merely difference in kind
+- **Qualitative**: used for data that does not imply order, but difference in kind
 
 Example Usage:
 
 ```
 access brewer;
-pen[] cols = brewer.Qualitative("Paired", 6)
+size(100);
+pen[] cols = brewer.Qualitative("Paired", 6);
 fill(unitcircle, cols[0]);
 ```
 Included in this repository is the file `demo.asy` which gives a further example of
