@@ -14,8 +14,30 @@
 // 	"YlGn", "Purples"}
 // DivergingPalettes = {"Spectral", "RdYlGn", "PRGn", "RdBu", "RdGy", "RdYlBu", "PiYG",
 //     "PuOr", "BrBG"}
-// QualitativePalettes = {"Pastel2", "Pastel1", "Dark2", "Accent", "Paired", "Set1",
+// QualitativePalettes = {"Pastel1", "Pastel2", "Dark2", "Accent", "Paired", "Set1",
 //    "Set2", "Set3"}
+
+string[] Types() {
+  return new string[] {"Diverging", "Qualitative", "Sequential"};
+}
+
+string[] Palettes(string type){
+  string[] pals;
+  if (type == "Diverging") {
+    pals = new string[] {"Spectral", "RdYlGn", "RdBu", "PiYG", "PRGn", "RdYlBu",
+      "BrBG", "RdGy", "PuOr"};
+  }
+  if (type == "Qualitative") {
+    pals = new string[] {"Accent", "Set1", "Set2", "Set3", "Dark2", "Paired",
+      "Pastel1", "Pastel2"};
+  }
+  if (type == "Sequential") {
+    pals = new string[] {"OrRd", "PuBu", "BuPu", "Oranges", "BuGn", "YlOrBr", "YlGn",
+      "Reds", "RdPu", "Greens", "YlGnBu", "Purples", "GnBu", "Greys", "YlOrRd",
+      "PuRd", "Blues", "PuBuGn"};
+  }  
+  return pals;
+}
 
 pen[] Diverging(string name, int n = 4){
   assert(n > 3, "n must be at least 3");
@@ -2852,4 +2874,12 @@ pen[] Sequential(string name, int n = 4){
 		}
 	}
 return p;
+}
+
+pen[] Palette(string type, string name, int n = 4){
+  pen [] p;
+  if (type == "Qualitative") {p = Qualitative(name, n);}
+  if (type == "Diverging") {p = Diverging(name, n);}
+  if (type == "Sequential") {p = Sequential(name, n);}
+  return p;
 }
