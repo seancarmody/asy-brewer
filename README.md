@@ -30,7 +30,7 @@ fill(unitcircle, cols[0]);
 Included in this repository is the file `demo.asy` which gives a further example of
 usage of the module which produces the figure below.
 
-![Colour Demo](https://raw.githubusercontent.com/seancarmody/asy-brewer/main/demo.png)
+![Colour Demo](https://github.com/seancarmody/asy-brewer/raw/main/images/demo.png)
 
 Also included in this repository is `brewer.json` which provides all of the ColorBrewer
 palettes in [JSON](https://www.json.org/json-en.html) format.
